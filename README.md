@@ -1,1 +1,1 @@
-# WordNetEmbeddings
+# Word Net Embeddings
