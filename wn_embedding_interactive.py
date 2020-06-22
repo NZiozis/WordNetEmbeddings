@@ -3,7 +3,7 @@ dic = {}
 class bcolors:
     HEADER = '\033[95m'
     BOLD = '\033[1m'
-    UNDERLINE = '\033[100m\033[97m'
+    UNDERLINE = '\033[4m\033[100m\033[97m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
     WARNING = '\033[93m'
