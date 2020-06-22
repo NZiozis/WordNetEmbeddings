@@ -1,3 +1,6 @@
+import argparse
+import sys
+
 dic = {}
 
 class bcolors:
@@ -9,6 +12,10 @@ class bcolors:
     WARNING = '\033[93m'
     FAIL = '\033[91m'
     ENDC = '\033[0m'
+
+class N:
+    pass 
+
 
 def build_up_dic():
     '''
@@ -30,22 +37,22 @@ def main():
     print out its/their word vector(s) respectively
     '''
     global dic
-    
+
+    # use ns to access the namespace
+    ns = N()
+
     # process the input from the user
-    print()
-    required_synset_name = input(f"{bcolors.BOLD}Enter the synset name(s):{bcolors.ENDC} ({bcolors.WARNING}seperate multiple synset names with a white space {bcolors.ENDC}) \n").strip().split()
-    
-    # check if the input is empty
-    num_required = len(required_synset_name)
-    if num_required == 0:
-        print(bcolors.UNDERLINE + "\tThere should be at least one synset name as the input." + bcolors.ENDC)
-        exit()
-    
+    parser = argparse.ArgumentParser(description='Process one or more synset names seperated by white space and return their respective word vectors.')
+    parser.add_argument('synset_name', nargs='+', help="The name of the synset to process.")
+    parser.add_argument('-v','--version', action='version', version='WordNet 3.0')
+    parser.parse_args(sys.argv[1:], namespace=ns)
+
     # build up the dictionary
     build_up_dic()
-
+    
     error_num = 0
-    for syn_name in required_synset_name:
+    num_required = len(ns.synset_name)
+    for syn_name in ns.synset_name:
         print()
         if syn_name in dic:
             print(f"{bcolors.HEADER}Synset name: {bcolors.ENDC}"+bcolors.OKGREEN+ syn_name + bcolors.ENDC +'\n' +', '.join(dic[syn_name]))
@@ -70,4 +77,5 @@ def main():
 
 
 
+    
 main()
