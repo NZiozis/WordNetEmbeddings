@@ -3,7 +3,8 @@ dic = {}
 class bcolors:
     HEADER = '\033[95m'
     BOLD = '\033[1m'
-    UNDERLINE = '\033[100m\033[97m'
+    SUMMARY = '\033[100m\033[97m'
+    UNDERLINE = '\033[4m'
     OKBLUE = '\033[94m'
     OKGREEN = '\033[92m'
     WARNING = '\033[93m'
@@ -57,16 +58,16 @@ def main():
     print()
     if error_num == 0:
         if num_required > 2:
-            print(f"{bcolors.UNDERLINE}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "All " + str(len(required_synset_name)) + " synset names are processed successfully." + bcolors.ENDC)
+            print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "All " + str(len(required_synset_name)) + " synset names are processed successfully." + bcolors.ENDC)
         elif num_required == 2:
-            print(f"{bcolors.UNDERLINE}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "Both synset names are processed successfully." + bcolors.ENDC)
+            print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "Both synset names are processed successfully." + bcolors.ENDC)
         elif num_required == 1:
-            print(f"{bcolors.UNDERLINE}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "The synset name is processed successfully." + bcolors.ENDC)
+            print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "The synset name is processed successfully." + bcolors.ENDC)
     else:
         if num_required != error_num:
-            print(f"{bcolors.UNDERLINE}Summary{bcolors.ENDC}: " + bcolors.FAIL + "There is/are " + str(error_num) + " error(s)." + bcolors.ENDC + "The process of the other synset name(s) is successful.")
+            print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.FAIL + "There is/are " + str(error_num) + " error(s)." + bcolors.ENDC + "The process of the other synset name(s) is successful.")
         else:
-            print(f"{bcolors.UNDERLINE}Summary{bcolors.ENDC}: " + bcolors.FAIL + "There is/are " + str(error_num) + " error(s)." + bcolors.ENDC)
+            print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.FAIL + "There is/are " + str(error_num) + " error(s)." + bcolors.ENDC)
 
 
 
