@@ -65,7 +65,7 @@ def main():
     print()
     if error_num == 0:
         if num_required > 2:
-            print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "All " + str(len(required_synset_name)) + " synset names are processed successfully." + bcolors.ENDC)
+            print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "All " + str(num_required) + " synset names are processed successfully." + bcolors.ENDC)
         elif num_required == 2:
             print(f"{bcolors.SUMMARY}Summary{bcolors.ENDC}: " + bcolors.OKGREEN + "Both synset names are processed successfully." + bcolors.ENDC)
         elif num_required == 1:
