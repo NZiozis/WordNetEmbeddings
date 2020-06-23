@@ -2,7 +2,7 @@
 
 ## Description
 
-This program allows users to use [pre-generated vector embeddings](#how-the-vectors-are-generated) on the WordNet graph of hypernyms and hyponyms to conduct word sense disambiguation of words in sentence. In python_API.py, the user provides a WordNet synset they are interested in and the vector is returned.
+This program allows users to use [pre-generated vector embeddings](#how-the-vectors-are-generated) on the WordNet graph of hypernyms and hyponyms to conduct word sense disambiguation of words in sentence. In wn_embedding_*.py, the user provides a WordNet synset they are interested in and the vector is returned.
 
 ## Usage
 
