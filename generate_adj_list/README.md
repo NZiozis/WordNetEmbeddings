@@ -1,1 +1,34 @@
 # Generating the Adjacency List
+
+## Description
+    
+This program allows users to generate an undirected adjacency list composed of the hypernym and hyponym edges in the nltk WordNet 3.0 graph. The output format for a synset is as follows:
+
+``` text
+meet.v.05 718 717 797 12410 21109 21110 3943
+```
+
+The first column is the synset name. The second column is the node ID for the synset. All other numbers that follow are the node IDs that there exists an edge to. 
+
+In order to use this in the DeepWalk algorithm, it is necessary to remove the synset name column. The name is there to facilitate the creation of the composite file and for debugging.
+
+## Requirements
+- Python 3
+- nltk >= 3.5
+
+It is recommended that you install this in a [virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) so that any varying versions of nltk on the machine won't conflict. This is not necessary on a clean machine.
+
+## Usage 
+
+Run the script using the following command:
+``` sh
+$ python adjList.py
+```
+
+The results will be printed to standard output, so it is necessary to redirect the output to a file if you want to use the output for anything besides debugging. A UNIX example for how this can be achieved is shown below: 
+
+``` sh
+$ python adjList.py > output.txt
+```
+
+The results will be stored in the file output.txt.
