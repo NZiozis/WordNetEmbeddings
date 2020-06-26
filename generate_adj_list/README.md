@@ -18,6 +18,21 @@ In order to use this in the DeepWalk algorithm, it is necessary to remove the sy
 
 It is recommended that you install this in a [virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/) so that any varying versions of nltk on the machine won't conflict. This is not necessary on a clean machine.
 
+After installing nltk it is necessary to download the data for WordNet. This can be achieved by running python in interpreter mode with the following command.
+
+``` sh
+$ python
+```
+
+In interpreter mode run the following two commands:
+
+``` sh
+>>> import nltk
+>>> nltk.download()
+```
+
+After the second command, a window should appear. Navigate to the Corpora tab, select WordNet, and download it in the default location provided by ntlk.
+
 ## Usage 
 
 Run the script using the following command:
