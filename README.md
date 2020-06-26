@@ -9,11 +9,9 @@ This program allows users to use [pre-generated vector embeddings](#how-the-vect
 #### 1. Interactive Version
 
 - First, run the _wn_embedding_interactive.py_ file.
-
   ```
   $ python wn_embedding_interactive.py
   ```
-
 - Second, after the `Enter the synset name(s):` line showed up, input **at least one** or more synset names **separated by white space**. If the input is empty, the program will report a warning message and exit.
 
 - Then, the program will process the input. If one of the synset names is invalid, the program will report an error message and **continue** processing the other synset names. Otherwise, it will return the word vector respectively for each synset name.
@@ -22,7 +20,8 @@ This program allows users to use [pre-generated vector embeddings](#how-the-vect
 
   _Demo for interactive version:_
 
-  ![interactive demo](/images/interactive.gif)
+  ![interactive demo](/images/interactive.gif
+)
 
   ***
 
